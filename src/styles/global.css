@@ -1,0 +1,125 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #161616;
+  --bg-card: #1e1e1e;
+  --bg-hover: #242424;
+  --red: #e24b4a;
+  --red-dark: #c0392b;
+  --red-glow: rgba(226, 75, 74, 0.15);
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --text-muted: #555555;
+  --border: #242424;
+  --green: #4ade80;
+  --yellow: #facc15;
+}
+
+/* Corpo */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+/* Botões */
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+}
+.btn-primary:hover {
+  background: var(--red-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-secondary:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* Inputs */
+input, textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+  transition: border 0.15s;
+}
+input:focus, textarea:focus {
+  border-color: var(--red);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Badge */
+.badge {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.badge-red {
+  background: var(--red-glow);
+  color: var(--red);
+}
+.badge-green {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--green);
+}
+.badge-gray {
+  background: var(--bg-hover);
+  color: var(--text-muted);
+}
