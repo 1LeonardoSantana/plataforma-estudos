@@ -16,6 +16,10 @@ const disciplinasRoutes = require('./routes/disciplinasRoutes');
 const tarefasRoutes = require('./routes/tarefasRoutes');
 // Importa as rotas de flashcards
 const flashcardsRoutes = require('./routes/flashcardsRoutes');
+// Importa as rotas de sessões de estudo
+const sessoesRoutes = require('./routes/sessoesRoutes');
+
+
 //Cria a aplicação Express 
 const app = express();
 
@@ -32,7 +36,8 @@ app.use('/disciplinas', disciplinasRoutes);
 app.use('/tarefas', tarefasRoutes);
 // Registra as rotas de flashcards no caminho /flashcards
 app.use('/flashcards', flashcardsRoutes);
-
+// Registra as rotas de sessões no caminho /sessoes
+app.use('/sessoes', sessoesRoutes);
 //Rota de teste - quando alguém acessar "/", retorna uma mensagem 
 app.get('/',(req,res) => {
     res.json ({mensagem :'API Plataforma de Estudos funcionando !'})
